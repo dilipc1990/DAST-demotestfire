@@ -20,3 +20,4 @@ jobs:
           target: 'https://demo.testfire.net/login.jsp'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
+          fail_action: true
