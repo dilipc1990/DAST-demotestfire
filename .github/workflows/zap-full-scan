@@ -1,10 +1,7 @@
 name: ZAP Full Scan
 
 on: 
-  push:
-    branches: ["zap-full-workflow"]
-  pull_request:
-    branches: ["zap-full-workflow"]
+  [push]
 
 jobs:
   zap_scan:
