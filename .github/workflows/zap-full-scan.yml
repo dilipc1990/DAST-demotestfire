@@ -19,5 +19,5 @@ jobs:
           docker_name: 'owasp/zap2docker-stable'
           target: 'https://demo.testfire.net/login.jsp'
           rules_file_name: '.zap/rules.tsv'
-          cmd_options: '-a'
+          cmd_options: '-n demo.context'
           fail_action: true
