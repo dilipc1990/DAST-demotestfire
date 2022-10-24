@@ -1,2 +1,3 @@
 def zap_pre_shutdown(zap):
-  print(stats.ascan.urls)
+  print(zap.spider.all_urls)
+  print(zap.stats.ascan.urls)
