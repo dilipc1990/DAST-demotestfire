@@ -18,5 +18,5 @@ jobs:
         with:
           target: 'https://demo.testfire.net/login.jsp'
           rules_file_name: '.zap/rules.tsv'
-          cmd_options: '-n /zap/wrk/demo.context -U test --hook=/zap/wrk/my-hooks.py -a'
+          cmd_options: '-n /zap/wrk/demo.context -U test --hook=/zap/wrk/my-hooks.py --hook=/zap/wrk/my-hooks.py -a'
           fail_action: false
