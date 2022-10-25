@@ -12,5 +12,7 @@ jobs:
     name: Scan ZAP website
     steps:
       - name: Docker Pull
-        run: docker pull owasp/zap2docker-stable
+        run: |
+          docker pull owasp/zap2docker-stable
+          docker run --user root -v /home/runner/work/dast-demotestfire/dast-demotestfire:/zap/wrk/:rw --network=host -t owasp/zap2docker-stable zap-baseline.py -t https://demo.testfire.net/login.jsp -J report_json.json -w report_md.md -r report_html.html
 
