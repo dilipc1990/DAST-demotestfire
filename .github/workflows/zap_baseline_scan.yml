@@ -14,4 +14,4 @@ jobs:
       - name: Docker Pull and Run
         run: |
           docker pull owasp/zap2docker-stable
-          docker run -v $GITHUB_WORKSPACE/zap/wrk/:rw --network=host -t owasp/zap2docker-stable zap-baseline.py -t https://google-gruyere.appspot.com/417486852524806271578217000180932287881/
+          docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw --network=host -t owasp/zap2docker-stable zap-baseline.py -t https://google-gruyere.appspot.com/417486852524806271578217000180932287881/
