@@ -13,5 +13,9 @@ jobs:
     steps:
       - name: Docker Pull and Run
         run: |
+          touch report_json.json report_md.md report_html.html
+          chmod a+w report_json.json report_md.md report_html.html
+          
           docker pull owasp/zap2docker-stable
-          docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw --network=host -t owasp/zap2docker-stable zap-baseline.py -t https://google-gruyere.appspot.com/417486852524806271578217000180932287881/
+          docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw --network=host -t owasp/zap2docker-stable zap-baseline.py -t https://google-gruyere.appspot.com/417486852524806271578217000180932287881/ -J report_json.json -w report_md.md -r report_html.html
+
