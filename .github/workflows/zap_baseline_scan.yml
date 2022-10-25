@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Scan Demo Testfire
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Docker Pull and Run using Automation framework
         run: |
           touch report_json.json report_md.md report_html.html
