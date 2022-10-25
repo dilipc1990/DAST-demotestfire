@@ -2,9 +2,9 @@ name: ZAP baseline Scan
 
 on: 
   push:
-    branches: ["zap-baseline-workflow"]
+    branches: ["docker-test-github-runner"]
   pull_request:
-    branches: ["zap-baseline-workflow"]
+    branches: ["docker-test-github-runner"]
 
 jobs:
   zap_scan:
