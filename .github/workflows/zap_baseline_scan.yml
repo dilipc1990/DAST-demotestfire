@@ -9,6 +9,9 @@ on:
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
+    env: 
+      DAST_USERNAME: ${{ secrets.DAST_USERNAME }}
+      DAST_PASSWORD: ${{ secrets.DAST_PASSWORD }}
     name: Scan Demo Testfire
     steps:
       - name: Checkout
