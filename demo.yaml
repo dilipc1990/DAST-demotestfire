@@ -28,8 +28,8 @@ env:
     users:
     - name: "test"
       credentials:
-        password: ${password}
-        username: ${username}
+        password: ${DAST_PASSWORD}
+        username: ${DAST_USERNAME}
   parameters:
     failOnError: true
     failOnWarning: false
