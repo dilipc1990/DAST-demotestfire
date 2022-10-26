@@ -17,4 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Automation framework
-        run: echo "$DAST_USERNAME $DAST_PASSWORD"
+        run: |
+          touch report_json.json report_md.md report_html.html
+          chmod a+w report_json.json report_md.md report_html.html
+          
+          docker pull owasp/zap2docker-stable
+          docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw --network=host -t owasp/zap2docker-stable zap-x.sh -cmd -autorun /zap/wrk/demo.yaml
+
