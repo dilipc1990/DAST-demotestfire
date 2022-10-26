@@ -28,8 +28,8 @@ env:
     users:
     - name: "test"
       credentials:
-        password: ${DAST_PASSWORD}
-        username: ${DAST_USERNAME}
+        password: "${DAST_PASSWORD}"
+        username: "${DAST_USERNAME}"
   parameters:
     failOnError: true
     failOnWarning: false
@@ -81,18 +81,6 @@ jobs:
     maxDuration: 0
   name: "passiveScan-wait"
   type: "passiveScan-wait"
-- parameters:
-    context: "https://demo.testfire.net"
-    user: "test"
-    policy: ""
-    maxRuleDurationInMins: 30
-    maxScanDurationInMins: 0
-  policyDefinition:
-    defaultStrength: "medium"
-    defaultThreshold: "medium"
-    rules: []
-  name: "activeScan"
-  type: "activeScan"
 - parameters:
     template: "risk-confidence-html"
     reportDir: "/zap/wrk"
