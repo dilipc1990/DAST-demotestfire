@@ -21,8 +21,8 @@ jobs:
           touch report_json.json report_md.md report_html.html
           chmod a+w report_json.json report_md.md report_html.html
           
-          export USERNAME=jsmith
-          export PASSWORD=Demo1234
+          export username=jsmith
+          export password=Demo1234
           docker pull owasp/zap2docker-stable
-          docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw --network=host -t owasp/zap2docker-weekly zap.sh -cmd -autorun /zap/wrk/demo.yaml
+          docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw --network=host -t owasp/zap2docker-stable zap.sh -cmd -autorun /zap/wrk/demo.yaml
 
