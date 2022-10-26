@@ -52,11 +52,11 @@ jobs:
   tests:
   - onFail: "ERROR"
     statistic: "stats.auth.state.loggedin"
-    site: ""
+    site: "https://demo.testfire.net"
     operator: ">="
     value: 1
     type: "stats"
-    name: "Logged in at least once"
+    name: "At Least logged in once"
   name: "spider"
   type: "spider"
 - parameters:
