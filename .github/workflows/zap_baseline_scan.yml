@@ -21,6 +21,8 @@ jobs:
           touch report_json.json report_md.md report_html.html
           chmod a+w report_json.json report_md.md report_html.html
           
+          export USERNAME=$DAST_USERNAME
+          export PASSWORD=$DAST_PASSWORD
           docker pull owasp/zap2docker-stable
           docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw --network=host -t owasp/zap2docker-weekly zap.sh -cmd -autorun /zap/wrk/demo.yaml
 
