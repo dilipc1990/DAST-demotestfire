@@ -13,7 +13,7 @@ env:
       parameters:
         loginPageUrl: "https://demo.testfire.net/doLogin"
         loginRequestUrl: "https://demo.testfire.net/doLogin"
-        loginRequestBody: "uid={%username%}&passw={%password%}&btnSubmit=Login"
+        loginRequestBody: "uid=jsmith&passw=Demo1234&btnSubmit=Login"
       verification:
         method: "response"
         loggedInRegex: "\\Q<a id=\"LoginLink\" href=\"/logout.jsp\">\\E"
