@@ -28,20 +28,14 @@ env:
     users:
     - name: "test"
       credentials:
-        password: "jsmith"
-        username: "Demo1234"
+        password: "Demo1234"
+        username: "jsmith"
   parameters:
     failOnError: true
     failOnWarning: false
     progressToStdout: true
   vars: {}
 jobs:
-- parameters:
-    scanOnlyInScope: true
-    enableTags: false
-  rules: []
-  name: "passiveScan-config"
-  type: "passiveScan-config"
 - parameters:
     context: "https://demo.testfire.net"
     user: "test"
@@ -56,13 +50,7 @@ jobs:
     operator: ">="
     value: 1
     type: "stats"
-    name: "At Least logged in once"
+    name: "At least logged in once"
   name: "spider"
   type: "spider"
-- parameters:
-    template: "risk-confidence-html"
-    reportDir: "/zap/wrk"
-    reportTitle: "ZAP Scanning Report"
-    reportDescription: ""
-  name: "report"
-  type: "report"
+
