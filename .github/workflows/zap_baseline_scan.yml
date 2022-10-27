@@ -22,5 +22,5 @@ jobs:
           chmod a+w report_json.json report_md.md report_html.html
           
           docker pull owasp/zap2docker-stable
-          docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw -e DAST_USERNAME -e DAST_PASSWORD --network=host -t owasp/zap2docker-stable zap.sh -cmd -autorun /zap/wrk/demo.yaml
+          docker run -v $GITHUB_WORKSPACE:/zap/wrk/:rw -e DAST_USERNAME -e DAST_PASSWORD -t owasp/zap2docker-stable zap.sh -cmd -autorun /zap/wrk/demo.yaml
 
