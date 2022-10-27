@@ -1,4 +1,4 @@
-name: ZAP baseline Scan
+name: ZAP Custom Docker Scan
 
 on: 
   push:
