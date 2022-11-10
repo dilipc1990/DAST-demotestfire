@@ -1,5 +1,5 @@
 def zap_pre_shutdown(zap):
   for url in zap.spider.all_urls:
-    print(url)
+    #print(url)
   
-  print(zap.spider.state.loggedin('https://demo.testfire.net'))
+  print(zap.stats.site_stats('https://demo.testfire.net'))
