@@ -3,4 +3,4 @@ def zap_pre_shutdown(zap):
     print(url)
   
   print(zap.spider.all_urls())
-  print(zap.spider.state.loggedin('https://demo.testfire.net')
+  print(zap.spider.state.loggedin('https://demo.testfire.net'))
