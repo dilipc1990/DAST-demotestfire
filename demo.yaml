@@ -36,13 +36,7 @@ env:
     progressToStdout: true
   vars: {}
 jobs:
-- parameters:
-    context: "https://demo.testfire.net"
-    user: "test"
-    url: "https://demo.testfire.net"
-    maxDuration: 0
-    maxDepth: 0
-    maxChildren: 0
+- parameters: {}
   tests:
   - onFail: "ERROR"
     statistic: "stats.auth.state.loggedin"
